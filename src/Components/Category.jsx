@@ -4,6 +4,9 @@ import Gold from '../assets/Gold.jpeg';
 import Silver from '../assets/Silver.jpeg';
 import Antique from '../assets/Antique.jpg';
 import Gifts from '../assets/Gifts.jpeg';
+import ScrollFadeInCard from '../animations/FadeIn';
+import { motion } from "framer-motion";
+
 
 const Category = () => {
     const Category = ["All","Necklaces","Earrings","Bracelets","Rings","Traditional"]
@@ -21,15 +24,27 @@ const Category = () => {
     <div className='flex flex-col justify-center items-center pt-5 mx-auto'>
       <h1 className='text-3xl text-amber-800 font-bold text-center'>Our Collection</h1>
       <div className='flex flex-wrap justify-center gap-3 mt-5'>
+        
         {Category.map((item,index)=>(
             <div key={index} className='rounded-3xl p-2  bg-amber-100 text-amber-800'>
                 <h1>{item}</h1>
             </div>
         ))}
+        
+       
       </div>
-      <div className="collection grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 mt-6 m-3 ">
-        {featuredCollections.map((collection)=>(
-            <div className='item border rounded-md hover:scale-105 transition-all duration-300 '>
+      
+      <div className="collection grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-10 mt-6 m-7 ">
+        {featuredCollections.map((collection,index)=>(
+          <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="item border rounded-md hover:scale-105 transition-all duration-300"
+        >
+            <div className='item rounded-md hover:scale-105 transition-all duration-300 '>
                 <div className='h-64'>
                   <img className='h-full w-full object-cover' src={collection.image}/>
                 </div>
@@ -40,8 +55,11 @@ const Category = () => {
                 </div>
                 
             </div>
+            </motion.div>
         ))}
       </div>
+      
+      
      
     </div>
   )
