@@ -26,7 +26,7 @@ const Category = () => {
       <div className='flex flex-wrap justify-center gap-3 mt-5'>
         
         {Category.map((item,index)=>(
-            <div key={index} className='rounded-3xl p-2  bg-amber-100 text-amber-800'>
+            <div key={index} className='rounded-3xl p-2  bg-amber-100 text-amber-900'>
                 <h1>{item}</h1>
             </div>
         ))}
@@ -42,16 +42,16 @@ const Category = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: index * 0.1 }}
           viewport={{ once: true }}
-          className="item border rounded-md hover:scale-105 transition-all duration-300"
+          className="item border rounded-md "
         >
-            <div className='item rounded-md hover:scale-105 transition-all duration-300 '>
+            <div className='item rounded-md bg-white border '>
                 <div className='h-64'>
                   <img className='h-full w-full object-cover' src={collection.image}/>
                 </div>
                 <div className='m-3'>
                   <h1 className='text-amber-900 text-xl font-semibold '>{collection.name}</h1>
-                  <h1 className='text-amber-700  '>{collection.description}</h1>
-                  <button className='bg-amber-700 text-amber-100 p-3 mt-5 rounded-2xl px-6 '>Enquire</button>
+                  <h1 className='text-amber-700   '>{collection.description}</h1>
+                  <button className='bg-[#800000] text-white p-3 mt-5 rounded-2xl px-6 '>Enquire</button>
                 </div>
                 
             </div>
