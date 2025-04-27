@@ -48,7 +48,7 @@ const Visit = () => {
               <input className='w-full px-3 py-2 border border-amber-200 rounded-md focus:outline-none' name='Time' placeholder='Enter your Prefered date & Time'></input>
             </div>
             <div className='mt-5 '>
-              <button className='bg-amber-700 text-amber-100 text-lg p-3 rounded-xl'>Request Appoinment</button>
+              <button className='bg-amber-800 text-amber-100 text-lg p-3 rounded-xl'>Request Appoinment</button>
             </div>
          
            

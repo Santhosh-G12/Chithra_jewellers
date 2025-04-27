@@ -4,7 +4,7 @@ import { Star } from 'lucide-react'
 const Testimonals = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <h1 className='mb-10 text-3xl font-bold '>Testimonals</h1>
+      <h1 className='mb-10 text-3xl font-bold text-amber-800 '>Testimonals</h1>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 m-10'>
         <div className='relative w-full border bg-white p-5 hover:scale-105 transition-all duration-300  '>
           <div className='absolute -top-4 left-8 text-amber-800 bg-amber-800 rounded-full p-2'>

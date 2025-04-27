@@ -1,7 +1,5 @@
 import React from 'react'
 import Category from './Components/Category'
-
-import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import TitleBar from './Components/TitleBar'
 import Hero from './Components/Hero'
@@ -26,7 +24,7 @@ const MainApp = () => {
       <Testimonals/>
       <Visit/>
       <Storeinfo/>
-      <Footer/>
+     
     </div>
   )
 }

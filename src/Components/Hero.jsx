@@ -10,9 +10,9 @@ const Hero = () => {
       <div className='max-w-64 m-0 md:max-w-xl   '>
         <img src={Heroimage} className='' />
       </div>
-      <div className='flex flex-col justify-center gap-2 md:gap-8'>
+      <div className='flex flex-col justify-center gap-2 md:gap-8 lg:mr-12  p-2'>
         <motion.h1
-          className="text-[1.7rem] md:text-5xl font-bold text-amber-100 flex mx-auto"
+          className="text-[1.5rem] md:text-5xl font-bold text-amber-100 flex  "
           initial="hidden"
           animate="visible"
           variants={{
@@ -51,7 +51,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="border bg-amber-100 text-amber-800 rounded-md py-3 text-center md:px-5"
+            className=" bg-amber-200 text-amber-900 rounded-md py-3 text-center md:px-5 "
           >
             Explore Collections
           </motion.button>
